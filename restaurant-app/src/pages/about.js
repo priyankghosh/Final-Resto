@@ -10,7 +10,12 @@ const sectionStyle = {
 
 const About = () => {
 return (
-	<div style={{marginLeft: "15px", backgroundImage: "url('https://blog.dineout-cdn.co.in/blog/wp-content/uploads/2017/07/Frio-bistro.jpg')", backgroundposition: "center", backgroundRepeat: "no-repeat"}}>		
+	<div style={
+		{marginLeft: "15px", 
+		backgroundImage: "url('')", 
+		backgroundposition: "center", 
+		backgroundRepeat: "no-repeat"}
+		}>		
 		
 		<h2 style={{margin: "40px", padding: "35px", color: "yellow"}}>ABOUT US </h2>
 		<p style={{color: "#00ff00", margin: "40px"}}>

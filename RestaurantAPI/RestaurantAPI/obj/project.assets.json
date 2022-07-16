@@ -7645,11 +7645,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\OTHERS\\RESTAURANT-APP\\RestaurantAPI\\RestaurantAPI\\RestaurantAPI.csproj",
+      "projectUniqueName": "D:\\mob\\COGZ_PROJX\\Restaurant-FINAL-master\\RestaurantAPI\\RestaurantAPI\\RestaurantAPI.csproj",
       "projectName": "RestaurantAPI",
-      "projectPath": "D:\\OTHERS\\RESTAURANT-APP\\RestaurantAPI\\RestaurantAPI\\RestaurantAPI.csproj",
+      "projectPath": "D:\\mob\\COGZ_PROJX\\Restaurant-FINAL-master\\RestaurantAPI\\RestaurantAPI\\RestaurantAPI.csproj",
       "packagesPath": "C:\\Users\\Priyank\\.nuget\\packages\\",
-      "outputPath": "D:\\OTHERS\\RESTAURANT-APP\\RestaurantAPI\\RestaurantAPI\\obj\\",
+      "outputPath": "D:\\mob\\COGZ_PROJX\\Restaurant-FINAL-master\\RestaurantAPI\\RestaurantAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
