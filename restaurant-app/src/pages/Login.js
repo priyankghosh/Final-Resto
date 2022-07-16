@@ -12,6 +12,9 @@ const Login = () => {
     const userRef = useRef();
     const errRef = useRef();
 
+    const [admin, setAdmin] = useState('');
+    const auth = AuthContext();
+
     const [uid, setUid] = useState('');
     const [user, setUser] = useState('');
     const [pwd, setPwd] = useState('');
@@ -44,8 +47,7 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        //console.log(LOGIN_URL)
-        //console.log(uid+user+pwd)
+        
 
         try {
             const response = await axios.post(LOGIN_URL,
