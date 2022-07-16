@@ -1,33 +1,28 @@
-import React from 'react';
+import React from "react";
 import {
-  MDBFooter,
-  MDBContainer,
-  MDBCol,
-  MDBRow,
-} from 'mdb-react-ui-kit';
+    Box,
+    Container,
+    Row,
+    Column,
+    FooterLink,
+    Heading,
+} from "./FooterStyles";
 
-const footer = () => {
-  return (
-    <MDBFooter className='text-center text-white' style={{ backgroundColor: '#0a4275' }}>
-      <MDBContainer className='p-4 pb-0'>
-        <section className=''>
-          <p className='d-flex justify-content-center align-items-center'>
-            <span className='me-3'>Register for free</span>
-            <button type='button' className='btn btn-outline-light btn-rounded'>
-              Sign up!
-            </button>
-          </p>
-        </section>
-      </MDBContainer>
-
-      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-        © 2020 Copyright:
-        <a className='text-white' href='https://mdbootstrap.com/'>
-          MDBootstrap.com
-        </a>
-      </div>
-    </MDBFooter>
-  )
-}
-
-export default footer
+const Footer = () => {
+    return (
+        <Box>
+            <h6 style={{
+                color: "green",
+                textAlign: "center",
+                marginTop: "-50px"
+            }}>
+                Footer
+            </h6>
+            <Container>
+                <Row>
+                </Row>
+            </Container>
+        </Box>
+    );
+};
+export default Footer;

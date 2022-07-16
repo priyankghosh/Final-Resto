@@ -9,13 +9,14 @@ import About from './pages/about';
 import Blogs from './pages/blogs';
 import Contact from './pages/contact';
 import Login from './pages/Login';
-import footer from './components/Navbar/footer';
+import Footer from './components/Navbar/Footer';
 
 function App() {
   return (
     <>
       <Router>
         <Navbar />
+        
         <Routes>          
             <Route path='/about' element={<About/>} />
             <Route path='/contact' element={<Contact/>} />
@@ -24,7 +25,6 @@ function App() {
             <Route path='/Login' element={<Login/>} />      
             <Route path='*' element={<Error />} />       
         </Routes>
-        <footer />
       </Router>
       
       
