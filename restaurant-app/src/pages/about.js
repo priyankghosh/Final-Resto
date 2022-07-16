@@ -1,13 +1,5 @@
 import React from "react";
 
-const sectionStyle = {
-	margin: '5',
-	padding: '5',
-	border: '2',
-	outline:'0',
-	display: 'block'
-}
-
 const About = () => {
 return (
 	<div style={

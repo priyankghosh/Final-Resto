@@ -18,6 +18,8 @@ const Login = () => {
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
 
+    const resetdata=()=>{ window.location.reload(); }
+
     useEffect(() => {
         createAPIEndpoint(ENDPIONTS.ADMIN).fetchById(uid)
             .then(res => {
@@ -137,7 +139,7 @@ const Login = () => {
 
                         <button className='btn mx-5'>Sign In</button>
 
-                        <button className='btn ml-2'>Reset</button>
+                        <button className='btn ml-2' onClick={() => resetdata()}>Reset</button>
 
                     </form>
                     {/* <p>
