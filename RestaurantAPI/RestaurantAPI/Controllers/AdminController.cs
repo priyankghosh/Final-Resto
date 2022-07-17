@@ -24,6 +24,21 @@ namespace RestaurantAPI.Controllers
             return await _context.AdminUsers.ToListAsync();
         }
 
+        // GET: api/Admin/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<AdminUser>> GetAdminUsers(int id)
+        {
+            var admin = await _context.AdminUsers.FindAsync(id);
+
+            if (admin == null)
+            {
+                return NotFound();
+            }
+
+            return admin;
+        }
+
+        //To check if admin exists for the same set of id, pass and username
         [HttpPost]
         public async Task<ActionResult<AdminUser>> AdminLogin(AdminUser admin)
         {
@@ -39,5 +54,15 @@ namespace RestaurantAPI.Controllers
                 return BadRequest();
         }
 
+        //For adding the admins
+        [HttpPost]
+        [Route("adminregister")]
+        public async Task<ActionResult<AdminUser>> AdminRegister(AdminUser admin)
+        {
+            _context.AdminUsers.Add(admin);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetAdminUsers", new { id = admin.AdminId }, admin);
+        }
     }
 }
