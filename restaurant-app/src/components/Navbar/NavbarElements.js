@@ -3,11 +3,12 @@ import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-background: #37779e;
+background: linear-gradient(45deg, #000850 0%, #000320 100%), radial-gradient(100% 225% at 100% 0%, #FF6928 0%, #000000 100%), linear-gradient(225deg, #FF7A00 0%, #000000 100%), linear-gradient(135deg, #CDFFEB 10%, #CDFFEB 35%, #009F9D 35%, #009F9D 60%, #07456F 60%, #07456F 67%, #0F0A3C 67%, #0F0A3C 100%);
+background-blend-mode: screen, overlay, hard-light, normal;
 height: 85px;
 display: flex;
 justify-content: space-between;
-padding: 0.2rem calc((100vw - 1000px) / 2);
+padding: 0.4rem calc((100vw - 1000px) / 2);
 z-index: 12;
 `;
 
@@ -18,7 +19,8 @@ align-items: center;
 font-family: "Monospace", Lucida Console;
 font-size: 19px;
 text-decoration: none;
-padding: 0 1rem;
+padding: 0 2.5rem;
+margin: 0rem;
 height: 100%;
 cursor: pointer;
 &.active {
@@ -27,7 +29,7 @@ cursor: pointer;
 	font-size: 28px;
 	text-decoration: none;
 	background-color: powderblue;
-	margin-top : 15px;
+	margin-top : 10px;
 	border-radius: 25px;
 	height: 70px;
 }
@@ -50,7 +52,6 @@ color: #808080;
 export const NavMenu = styled.div`
 display: flex;
 align-items: center;
-text-decoration: none;
 margin-right: -24px;
 /* Second Nav */
 /* margin-right: 24px; */

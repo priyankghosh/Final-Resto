@@ -1,28 +1,15 @@
 import React from "react";
-import {
-    Box,
-    Container,
-    Row,
-    Column,
-    FooterLink,
-    Heading,
-} from "./FooterStyles";
 
-const Footer = () => {
-    return (
-        <Box>
-            <h6 style={{
-                color: "green",
-                textAlign: "center",
-                marginTop: "-50px"
-            }}>
-                Footer
-            </h6>
-            <Container>
-                <Row>
-                </Row>
-            </Container>
-        </Box>
-    );
-};
+const Footer = () => (
+  <div className="footer">
+    {/* <div align="center">
+    <div id="spoon"></div>  
+    <div id="knife"></div>  
+    <div id="fork"></div>
+    </div> */}
+    <h1>Restaurant</h1>
+    
+  </div>
+);
+
 export default Footer;

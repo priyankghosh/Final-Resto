@@ -7,16 +7,15 @@ import About from './pages/about';
 import Blogs from './pages/blogs';
 import Contact from './pages/contact';
 import Login from './pages/Login';
-import Home from './pages/home';
+import Home from './pages/Home';
 import Register from './pages/Register';
-// import Footer from './components/Navbar/Footer';
+import Footer from './components/Navbar/Footer';
 
 function App() {
   return (
     <>
       <Router>
-        <Navbar />
-        
+        <Navbar />        
         <Routes>          
             <Route path='/' element={<Home/>} />
             <Route path='/about' element={<About/>} />
@@ -27,6 +26,7 @@ function App() {
             <Route path='/Register' element={<Register/>} />      
             <Route path='*' element={<Error />} />       
         </Routes>
+        <Footer/>
       </Router>
       
       

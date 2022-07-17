@@ -177,12 +177,12 @@ const Register = () => {
                             </p>
                         </div>
 
-
                         <button
-                            className='btn mx-5'
+                            className='btn ml-5 px-5'
                             disabled={!validName || !validPwd || !validMatch ? true : false}>
                             Sign Up
                         </button>
+
                         <br /> <br />
                         <p>
                             Already registered?<br />

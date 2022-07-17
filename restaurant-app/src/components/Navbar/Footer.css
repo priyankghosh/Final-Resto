@@ -1,0 +1,58 @@
+.footer{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgb(150, 153, 154);
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 110px !important;
+    text-align: center;
+  }
+  @import url('https://fonts.googleapis.com/css?family=Allura');
+
+.footer {
+  background:#6d695c;
+  /* margin:0 auto; */
+  /* position:relative; */
+  /* padding:70px 0px; */
+  /* transform:scale(0.8); */
+  font-family: 'Allura', cursive;
+  color:#fff;
+background-image:
+repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+}
+
+#spoon, #knife, #fork {
+  display:inline-block;
+  margin-top:12vh;
+  margin-right:5vw;
+  margin-left:5vw;
+}
+
+#spoon {
+  transform:rotate(30deg);
+  border:10px solid transparent;
+  border-bottom:90px solid #fff;
+  background:#fff;
+  width:0px;
+  border-radius:10px;
+  border-bottom-left-radius:15px 30px;
+  border-bottom-right-radius:15px 30px;
+  border-top-left-radius:15px 150px;
+  border-top-right-radius:15px 150px;
+}
+
+#spoon:after {
+  content:'';
+  position:absolute;
+  top:-80px;
+  left:-31px;
+  width:60px;
+  height:80px;
+  border-radius:50%;
+  background:#fff;
+}

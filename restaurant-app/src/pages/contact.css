@@ -1,0 +1,17 @@
+.One {
+    text-align: center !important;
+    margin-bottom: 1cm;
+    margin-top: 1cm;
+    color: rgb(9, 12, 29);
+}
+
+.contact .container {
+    background-image: url("https://images.unsplash.com/photo-1615996001375-c7ef13294436?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGJ1cmdlciUyMGZyaWVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+}
+
+.Two {
+
+    text-align: center; 
+    margin-bottom: 1cm;
+    
+}
