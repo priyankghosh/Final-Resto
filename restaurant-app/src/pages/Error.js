@@ -9,7 +9,7 @@ const Error = () => {
       {/* <p>page not found</p> */}
       <p>
         <br />
-        <Link to='/about'>Back Home</Link>
+        <Link to='/'>Back Home</Link>
       </p>
       <p>
         <Link to='/Login'>Return to Login</Link>
