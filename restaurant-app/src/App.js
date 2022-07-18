@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import Register from './pages/Register';
 import Footer from './components/Navbar/Footer';
+import ProtectedRoute from './pages/ProtectedRoute'
 
 function App() {
   return (
@@ -21,7 +22,9 @@ function App() {
             <Route path='/about' element={<About/>} />
             <Route path='/contact' element={<Contact/>} />
             <Route path='/blogs' element={<Blogs/>} />
+
             <Route path='/order' element={<Order/>} />  
+            
             <Route path='/Login' element={<Login/>} />  
             <Route path='/Register' element={<Register/>} />      
             <Route path='*' element={<Error />} />       
