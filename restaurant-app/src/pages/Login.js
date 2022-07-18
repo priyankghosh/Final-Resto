@@ -30,7 +30,7 @@ const Login = () => {
         setErrMsg('');
     }, [uid, user, pwd])
 
-    const nav = useNavigate();
+    // const nav = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -51,7 +51,7 @@ const Login = () => {
             setPwd(pwd);
             setSuccess(true);
 
-            nav("/Order")
+            // nav("/Order")
 
         } catch (err) {
             if (!err?.response) {
@@ -74,7 +74,13 @@ const Login = () => {
                     <h1>You are logged in!</h1>
                     <br />
                     <p>
-                        <a href="/OrderForm">Go to Home</a>
+                        <a href="/Order">Order Now</a>
+                    </p>
+                    <p>
+                        <a href="/AddCustomer">Add Customers</a>
+                    </p>
+                    <p>
+                        <a href="/DelCustomer">Delete Customers</a>
                     </p>
                 </section>
             ) : (

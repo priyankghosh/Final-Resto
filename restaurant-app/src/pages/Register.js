@@ -66,9 +66,9 @@ const Register = () => {
                     withCredentials: true
                 }
             );
-            
+
             console.log(JSON.stringify(response?.data));
-            
+
             setSuccess(true);
             //clear state and controlled inputs
             setUser('');
@@ -93,7 +93,7 @@ const Register = () => {
                     <h1>Success!</h1>
                     <p>
                         <a href="/Login">Log In</a>
-                    </p>
+                    </p>                    
                 </section>
             ) : (
                 <section className='section'>
