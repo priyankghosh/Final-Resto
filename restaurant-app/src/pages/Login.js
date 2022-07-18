@@ -73,7 +73,7 @@ const Login = () => {
                     <h1>You are logged in!</h1>
                     <br />
                     <p>
-                        <a href="/Order">Order Now</a>
+                        <a href="/Login/Order">Order Now</a>
                     </p>
                     <p>
                         <a href="/AddCustomer">Add Customers</a>
