@@ -47,7 +47,10 @@ namespace RestaurantAPI.Controllers
             //await _context.SaveChangesAsync();
 
             List<AdminUser> users = await _context.AdminUsers.ToListAsync();
-            AdminUser usr = users.Find(e => e.AdminId == admin.AdminId && e.AdminPass == admin.AdminPass && e.AdminUsername == admin.AdminUsername);
+            AdminUser usr = users.Find(e =>
+                e.AdminPass == admin.AdminPass &&
+                e.AdminUsername == admin.AdminUsername
+            );
 
             if (usr != null)
                 return Ok();
@@ -60,10 +63,21 @@ namespace RestaurantAPI.Controllers
         [Route("adminregister")]
         public async Task<ActionResult<AdminUser>> AdminRegister(AdminUser admin)
         {
-            _context.AdminUsers.Add(admin);
-            await _context.SaveChangesAsync();
+            List<AdminUser> users = await _context.AdminUsers.ToListAsync();
+            AdminUser usr = users.Find(e =>
+                e.AdminPass == admin.AdminPass &&
+                e.AdminUsername == admin.AdminUsername
+            );
 
-            return CreatedAtAction("GetAdminUsers", new { id = admin.AdminId }, admin);
+            if (usr == null)
+            {
+                _context.AdminUsers.Add(admin);
+                await _context.SaveChangesAsync();
+
+                return CreatedAtAction("GetAdminUsers", new { id = admin.AdminId }, admin);
+            }
+
+            return BadRequest();
         }
 
         // PUT: api/Admin/{id}

@@ -20,19 +20,7 @@ const Login = () => {
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
 
-    const resetdata = () => { window.location.reload(); }
-
-    useEffect(() => {
-        createAPIEndpoint(ENDPIONTS.ADMIN).fetchById(uid)
-            .then(res => {
-                let adminList = res.data.map(item => ({
-                    uid: item.adminId,
-                    user: item.adminUsername,
-                    pwd: item.adminPass
-                }));
-            })
-            .catch(err => console.log(err))
-    }, [])
+    const resetdata = () => { window.location.reload(); }    
 
     useEffect(() => {
         userRef.current.focus();
@@ -47,23 +35,21 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-
         try {
             const response = await axios.post(LOGIN_URL,
-                JSON.stringify({ adminId: uid, adminUsername: user, adminPass: pwd }),
+                JSON.stringify({ adminUsername: user, adminPass: pwd }),
                 {
                     headers: { 'Content-Type': 'application/json' },
                     withCredentials: true
                 }
             );
-            //console.log(response)
+            
             console.log(JSON.stringify(response?.data));
-            // setAuth({ uid, user, pwd});
+            
             setUid(uid);
             setUser(user);
             setPwd(pwd);
             setSuccess(true);
-
 
             nav("/Order")
 
@@ -96,9 +82,9 @@ const Login = () => {
                     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
 
                     <form className='form' onSubmit={handleSubmit}>
-                        <h2 style={{color:"orange"}}>Log In</h2>
+                        <h2 style={{color:"#ffcc00"}}>Log In</h2>
 
-                        <div className='form-row'>
+                        {/* <div className='form-row'>
                             <label htmlFor="username" className='form-label'>User ID:</label>
                             <input
                                 className='form-input'
@@ -110,7 +96,7 @@ const Login = () => {
                                 value={uid}
                                 required
                             />
-                        </div>
+                        </div> */}
 
                         <div className='form-row'>
                             <label htmlFor="username" className='form-label'>Username:</label>

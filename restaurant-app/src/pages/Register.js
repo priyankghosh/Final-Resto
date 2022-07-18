@@ -6,7 +6,8 @@ import axios from 'axios';
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
-const REGISTER_URL = '/register';
+
+const REGISTER_URL = 'http://localhost:53688/api/Admin/adminregister';
 
 const Register = () => {
     const userRef = useRef();
@@ -26,6 +27,8 @@ const Register = () => {
 
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
+
+    const resetdata = () => { window.location.reload(); }
 
     useEffect(() => {
         userRef.current.focus();
@@ -49,21 +52,23 @@ const Register = () => {
         // if button enabled with JS hack
         const v1 = USER_REGEX.test(user);
         const v2 = PWD_REGEX.test(pwd);
+
         if (!v1 || !v2) {
             setErrMsg("Invalid Entry");
             return;
         }
+
         try {
             const response = await axios.post(REGISTER_URL,
-                JSON.stringify({ user, pwd }),
+                JSON.stringify({ adminUsername: user, adminPass: pwd }),
                 {
                     headers: { 'Content-Type': 'application/json' },
                     withCredentials: true
                 }
             );
-            // TODO: remove console.logs before deployment
+            
             console.log(JSON.stringify(response?.data));
-            //console.log(JSON.stringify(response))
+            
             setSuccess(true);
             //clear state and controlled inputs
             setUser('');
@@ -182,6 +187,7 @@ const Register = () => {
                             disabled={!validName || !validPwd || !validMatch ? true : false}>
                             Sign Up
                         </button>
+                        <button className='btn ml-2' onClick={() => resetdata()}>Reset</button>
 
                         <br /> <br />
                         <p>
